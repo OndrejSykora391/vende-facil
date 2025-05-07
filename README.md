@@ -154,8 +154,16 @@ Si el servidor está corriendo, deberías ver la página de inicio o la respuest
 
 ---
 
+## Metodología de Trabajo
+
+Este proyecto utiliza la metodología **Kanban** para la gestión y organización de tareas. Kanban permite visualizar el flujo de trabajo, identificar cuellos de botella y mejorar la eficiencia del equipo.
+
+---
+
 ## Autor e Institución
 **Autor:** Milton Figueredo  
+[LinkedIn](https://www.linkedin.com/in/milton-figueredo-miles-arts/)  
+[GitHub](https://github.com/Miles-Arts)  
 **Institución:** SENA - Servicio Nacional de Aprendizaje  
 **Programa:** Tecnólogo en Análisis y Desarrollo de Software  
 **Fecha:** Mayo 2025
@@ -191,4 +199,3 @@ SOFTWARE.
 ```
 
 ---
-````
