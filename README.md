@@ -160,6 +160,12 @@ Este proyecto utiliza la metodología **Kanban** para la gestión y organizació
 
 ---
 
+## Versión del Proyecto
+
+Este proyecto está actualmente en la versión **0.0.1**, lo que indica que se encuentra en una etapa muy temprana de desarrollo. A medida que se implementen más funcionalidades y se realicen mejoras, la versión será actualizada siguiendo el esquema de versionado semántico.
+
+---
+
 ## Autor e Institución
 **Autor:** Milton Figueredo  
 [LinkedIn](https://www.linkedin.com/in/milton-figueredo-miles-arts/)  
@@ -199,3 +205,4 @@ SOFTWARE.
 ```
 
 ---
+````
