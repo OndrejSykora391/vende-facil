@@ -77,6 +77,40 @@ La plataforma maneja distintos tipos de usuarios (clientes y vendedores), así c
      source env/bin/activate
      ```
 
+### Verificar si el entorno virtual está activo
+
+Para verificar si el entorno virtual está activo sin intentar activarlo nuevamente, puedes usar el siguiente comando:
+
+- En Git Bash o cualquier terminal compatible con Bash:
+  ```bash
+  echo $VIRTUAL_ENV
+  ```
+  Si el entorno virtual está activo, este comando mostrará la ruta al entorno virtual (por ejemplo, `p:/GITHUB/PROYECTOS/VENDEFACIL/env`). Si no está activo, no mostrará nada o estará vacío.
+
+- En PowerShell:
+  ```powershell
+  $env:VIRTUAL_ENV
+  ```
+  Esto también mostrará la ruta al entorno virtual si está activo. Si no está activo, no mostrará nada.
+
+### Ruta a seguir si no está activo
+
+1. Si el entorno virtual no está activo, actívalo con el comando correspondiente:
+   - En Git Bash:
+     ```bash
+     source env/Scripts/activate
+     ```
+   - En PowerShell:
+     ```powershell
+     .\env\Scripts\activate
+     ```
+   - En Command Prompt (CMD):
+     ```cmd
+     .\env\Scripts\activate.bat
+     ```
+
+2. Una vez activado, verifica nuevamente con el comando `echo $VIRTUAL_ENV` o `$env:VIRTUAL_ENV` según el terminal que estés utilizando.
+
 ---
 
 ## Autor e Institución
