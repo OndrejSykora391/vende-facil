@@ -144,6 +144,14 @@ py ./app/app.py
 
 Este comando iniciará el servidor Flask y pondrá en marcha la aplicación.
 
+### Verificar si el servidor está corriendo
+
+Después de inicializar el proyecto, puedes abrir tu navegador y visitar el siguiente enlace para verificar si el servidor Flask está funcionando correctamente:
+
+[http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+Si el servidor está corriendo, deberías ver la página de inicio o la respuesta configurada en tu aplicación Flask.
+
 ---
 
 ## Autor e Institución
@@ -183,3 +191,4 @@ SOFTWARE.
 ```
 
 ---
+````
