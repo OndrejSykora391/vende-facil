@@ -77,6 +77,81 @@ La plataforma maneja distintos tipos de usuarios (clientes y vendedores), así c
      source env/bin/activate
      ```
 
+### Verificar si el entorno virtual está activo
+
+Para verificar si el entorno virtual está activo sin intentar activarlo nuevamente, puedes usar el siguiente comando:
+
+- En Git Bash o cualquier terminal compatible con Bash:
+  ```bash
+  echo $VIRTUAL_ENV
+  ```
+  Si el entorno virtual está activo, este comando mostrará la ruta al entorno virtual (por ejemplo, `p:/GITHUB/PROYECTOS/VENDEFACIL/env`). Si no está activo, no mostrará nada o estará vacío.
+
+- En PowerShell:
+  ```powershell
+  $env:VIRTUAL_ENV
+  ```
+  Esto también mostrará la ruta al entorno virtual si está activo. Si no está activo, no mostrará nada.
+
+### Ruta a seguir si no está activo
+
+1. Si el entorno virtual no está activo, actívalo con el comando correspondiente:
+   - En Git Bash:
+     ```bash
+     source env/Scripts/activate
+     ```
+   - En PowerShell:
+     ```powershell
+     .\env\Scripts\activate
+     ```
+   - En Command Prompt (CMD):
+     ```cmd
+     .\env\Scripts\activate.bat
+     ```
+
+2. Una vez activado, verifica nuevamente con el comando `echo $VIRTUAL_ENV` o `$env:VIRTUAL_ENV` según el terminal que estés utilizando.
+
+### Instalación de Flask y Herramientas Adicionales
+
+Para instalar Flask y otras herramientas necesarias, utiliza los siguientes comandos:
+
+1. Instalar Flask:
+   ```bash
+   pip install flask
+   ```
+
+2. Instalar setuptools:
+   ```bash
+   pip install setuptools
+   ```
+
+3. Instalar wheel:
+   ```bash
+   pip install wheel
+   ```
+
+Asegúrate de que estás dentro del entorno virtual antes de ejecutar estos comandos. Puedes verificarlo con el comando `echo $VIRTUAL_ENV` o `$env:VIRTUAL_ENV` según el terminal que estés utilizando.
+
+---
+
+### Inicializar el Proyecto
+
+Para inicializar el proyecto, asegúrate de estar en la ruta de la carpeta `app` y ejecuta el siguiente comando:
+
+```bash
+py ./app/app.py
+```
+
+Este comando iniciará el servidor Flask y pondrá en marcha la aplicación.
+
+### Verificar si el servidor está corriendo
+
+Después de inicializar el proyecto, puedes abrir tu navegador y visitar el siguiente enlace para verificar si el servidor Flask está funcionando correctamente:
+
+[http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+Si el servidor está corriendo, deberías ver la página de inicio o la respuesta configurada en tu aplicación Flask.
+
 ---
 
 ## Autor e Institución
@@ -116,3 +191,4 @@ SOFTWARE.
 ```
 
 ---
+````
