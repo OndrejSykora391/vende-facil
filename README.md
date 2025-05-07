@@ -111,6 +111,39 @@ Para verificar si el entorno virtual está activo sin intentar activarlo nuevame
 
 2. Una vez activado, verifica nuevamente con el comando `echo $VIRTUAL_ENV` o `$env:VIRTUAL_ENV` según el terminal que estés utilizando.
 
+### Instalación de Flask y Herramientas Adicionales
+
+Para instalar Flask y otras herramientas necesarias, utiliza los siguientes comandos:
+
+1. Instalar Flask:
+   ```bash
+   pip install flask
+   ```
+
+2. Instalar setuptools:
+   ```bash
+   pip install setuptools
+   ```
+
+3. Instalar wheel:
+   ```bash
+   pip install wheel
+   ```
+
+Asegúrate de que estás dentro del entorno virtual antes de ejecutar estos comandos. Puedes verificarlo con el comando `echo $VIRTUAL_ENV` o `$env:VIRTUAL_ENV` según el terminal que estés utilizando.
+
+---
+
+### Inicializar el Proyecto
+
+Para inicializar el proyecto, asegúrate de estar en la ruta de la carpeta `app` y ejecuta el siguiente comando:
+
+```bash
+py ./app/app.py
+```
+
+Este comando iniciará el servidor Flask y pondrá en marcha la aplicación.
+
 ---
 
 ## Autor e Institución
