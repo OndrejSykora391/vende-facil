@@ -6,6 +6,39 @@ La plataforma maneja distintos tipos de usuarios (clientes y vendedores), así c
 
 ---
 
+## Tecnologías Utilizadas
+
+### Backend
+- Python
+- JSON
+- Flask
+- Postman
+- PostgreSQL
+- Jinja2
+- ENV o VENV
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+- Framework Bootstrap
+
+### Herramientas de Desarrollo
+- Git
+- GitHub
+- Visual Studio Code
+- Copilot Pro
+- Canva
+- Creadores de UML
+
+---
+
+## Sistema Operativo
+- Windows 11
+
+---
+
+## Autor e Institución
 **Autor:** Milton Figueredo  
 **Institución:** SENA - Servicio Nacional de Aprendizaje  
 **Programa:** Tecnólogo en Análisis y Desarrollo de Software  
