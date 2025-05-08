@@ -35,6 +35,8 @@ def contacto(nombre, edad):
 def query_string():
     print(request)
     print(request.args)
+    print(request.args.get('param1'))
+    print(request.args.get('param2'))
     return 'ok'
 
 # Verificar si el archivo se está ejecutando directamente

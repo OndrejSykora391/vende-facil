@@ -154,6 +154,32 @@ Si el servidor está corriendo, deberías ver la página de inicio o la respuest
 
 ---
 
+## Solución a Errores Comunes
+
+Si encuentras problemas al ejecutar el proyecto, sigue estos pasos para solucionarlos:
+
+1. **Verificar las rutas**:
+   - Asegúrate de que las rutas en el navegador sean correctas.
+   - Por ejemplo, para acceder a la página principal, utiliza: `http://127.0.0.1:5000/`.
+
+2. **Cerrar y abrir Visual Studio Code**:
+   - Si los cambios en el código no se reflejan, intenta cerrar y volver a abrir Visual Studio Code.
+
+3. **Actualizar la página web**:
+   - Presiona `Ctrl + F5` en el navegador para forzar la recarga de la página y evitar el uso de caché.
+
+4. **Reiniciar el servidor local**:
+   - Detén el servidor Flask y vuelve a iniciarlo con el comando:
+     ```
+     py ./app/app.py
+     ```
+
+5. **Cerrar y abrir una nueva terminal**:
+   - Si el entorno virtual o los comandos no funcionan correctamente, cierra la terminal actual y abre una nueva.
+   - Asegúrate de activar el entorno virtual nuevamente antes de ejecutar comandos.
+
+---
+
 ## Metodología de Trabajo
 
 Este proyecto utiliza la metodología **Kanban** para la gestión y organización de tareas. Kanban permite visualizar el flujo de trabajo, identificar cuellos de botella y mejorar la eficiencia del equipo.
@@ -205,4 +231,3 @@ SOFTWARE.
 ```
 
 ---
-````
