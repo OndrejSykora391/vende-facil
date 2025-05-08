@@ -1,26 +1,22 @@
-<!DOCTYPE html>
+<!-- Extender la plantilla base 'layout.html' -->
+{% extends './layout.html' %} 
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{data.titulo}}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-       <h1>{{  data.bienvenida  }}</h1>
-       {% if data.numero_cursos > 0 %}
-        <ul>
-            {% for curso in data.cursos  %}
-            <li>{{ curso }}</li>
-            {% endfor %} 
-        </ul>
-       {% else %}
-       <h2>No hay cursos disponibles</h2>
-       {% endif %}
-        
-        <script src="" async defer></script>
-    </body>
-</html>
+<!-- Definir el contenido del bloque 'title' para el título de la página -->
+{% block title %}{{data.titulo}}{% endblock %} 
+
+<!-- Definir el contenido del bloque 'body' para el cuerpo de la página -->
+{%block body%}
+<h1>{{  data.bienvenida  }}</h1>
+<!-- Mostrar una lista de cursos si hay cursos disponibles -->
+{% if data.numero_cursos > 0 %}
+<ul>
+    <!-- Iterar sobre la lista de cursos y mostrarlos como elementos de lista -->
+    {% for curso in data.cursos  %}
+    <li>{{ curso }}</li>
+    {% endfor %} 
+</ul>
+<!-- Mostrar un mensaje si no hay cursos disponibles -->
+{% else %}
+<h2>No hay cursos disponibles</h2>
+{% endif %}
+{% endblock %}

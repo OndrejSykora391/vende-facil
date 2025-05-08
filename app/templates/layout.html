@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
     <head>
+        <!-- Define el conjunto de caracteres como UTF-8 para soportar caracteres especiales -->
         <meta charset="utf-8">
+        <!-- Asegura la compatibilidad con versiones antiguas de Internet Explorer -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>
+            <!-- Bloque de Jinja2 para personalizar el título de la página desde plantillas hijas -->
+            {% block title %}{% endblock %}
+        </title>
+        <!-- Metaetiqueta para hacer que la página sea adaptable a dispositivos móviles -->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Enlace para incluir hojas de estilo externas -->
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
-    </body>
+        <!-- Bloque de Jinja2 para personalizar el contenido principal de la página desde plantillas hijas -->
+        {%block body%}
+        {% endblock %}
+        <!-- Enlace para incluir scripts externos, con atributos async y defer para optimizar la carga -->
+         <script src="" async defer></script>
+     </body>
 </html>
