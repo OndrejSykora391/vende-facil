@@ -1,0 +1,12 @@
+<!-- Extender la plantilla base 'layout.html' -->
+{% extends './layout.html' %} 
+
+<!-- Definir el contenido del bloque 'title' para el título de la página -->
+{% block title %}{{data.titulo}}{% endblock %} 
+
+<!-- Definir el contenido del bloque 'body' para el cuerpo de la página -->
+{%block body%}
+<h1>{{  data.nombre  }}</h1>
+<h1>Tu edad es: {{  data.edad }}</h2>
+
+{% endblock %}

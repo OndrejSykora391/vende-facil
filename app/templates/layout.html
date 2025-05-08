@@ -6,7 +6,6 @@
         <!-- Asegura la compatibilidad con versiones antiguas de Internet Explorer -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>
-            <!-- Bloque de Jinja2 para personalizar el título de la página desde plantillas hijas -->
             {% block title %}{% endblock %}
         </title>
         <!-- Metaetiqueta para hacer que la página sea adaptable a dispositivos móviles -->
@@ -20,6 +19,6 @@
         {%block body%}
         {% endblock %}
         <!-- Enlace para incluir scripts externos, con atributos async y defer para optimizar la carga -->
-         <script src="" async defer></script>
+         <script src="{{url_for('static',filename='js/layout.js') }}" async defer></script>
      </body>
 </html>

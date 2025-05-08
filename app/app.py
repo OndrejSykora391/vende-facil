@@ -11,13 +11,24 @@ def index():
     cursos=["PHP", "Python", "Java", "Go", "Cobol", "C++"]
     # Crear un diccionario con datos para pasar a la plantilla
     data={
-        'titulo': 'index.html',
+        'titulo': 'Inicio',
         'bienvenida': 'Holaaa',
         "cursos": cursos,
         "numero_cursos": len(cursos)
     }
     # Renderizar la plantilla HTML 'index.html' para la página principal
     return render_template('index.html', data=data)
+
+@app.route('/contacto/<nombre>/<int:edad>')
+def contacto(nombre, edad):
+    # Crear un diccionario con datos para pasar a la plantilla
+    data={
+        'titulo': 'Contacto',
+        'nombre': nombre,
+        'edad': edad
+    }
+    # Renderizar la plantilla HTML 'contacto.html' para la página de contacto
+    return render_template('contacto.html', data=data)
 
 # Verificar si el archivo se está ejecutando directamente
 if __name__=="__main__":
