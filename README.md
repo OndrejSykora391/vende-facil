@@ -1,3 +1,26 @@
+# Índice
+
+1. [Descripción del Proyecto](#vende-fácil)
+2. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+   2.1. [Backend](#backend)
+   2.2. [Frontend](#frontend)
+   2.3. [Herramientas de Desarrollo](#herramientas-de-desarrollo)
+3. [Sistema Operativo](#sistema-operativo)
+4. [Comandos de Instalación](#comandos-de-instalación)
+   4.1. [Instalación de Python](#instalación-de-python)
+   4.2. [Instalación de Virtualenv](#instalación-de-virtualenv)
+   4.3. [Verificar si el entorno virtual está activo](#verificar-si-el-entorno-virtual-está-activo)
+   4.4. [Instalación de Flask y Herramientas Adicionales](#instalación-de-flask-y-herramientas-adicionales)
+5. [Inicializar el Proyecto](#inicializar-el-proyecto)
+   5.1. [Verificar si el servidor está corriendo](#verificar-si-el-servidor-está-corriendo)
+6. [Solución a Errores Comunes](#solución-a-errores-comunes)
+7. [Metodología de Trabajo](#metodología-de-trabajo)
+8. [Versión del Proyecto](#versión-del-proyecto)
+9. [Autor e Institución](#autor-e-institución)
+10. [Licencia](#licencia)
+
+---
+
 # Vende-Fácil
 
 Vende-Fácil es una aplicación desarrollada para facilitar la conexión entre vendedores de productos agrícolas y compradores de alimentos del campo. Su propósito principal es actuar como intermediaria digital, permitiendo la gestión eficiente de ventas, compras, productos y usuarios dentro del ecosistema agrícola.
