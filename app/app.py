@@ -11,6 +11,7 @@ from flask import url_for, redirect
 # Crear una instancia de la aplicación Flask
 app=Flask(__name__)
 
+
 # Middleware que se ejecuta antes de cada solicitud
 @app.before_request
 def before_request():
