@@ -1,5 +1,6 @@
 from flask import Flask 
 from flask import render_template
+from flask import request
 
 # Crear una instancia de la aplicación Flask
 app=Flask(__name__)
@@ -30,7 +31,14 @@ def contacto(nombre, edad):
     # Renderizar la plantilla HTML 'contacto.html' para la página de contacto
     return render_template('contacto.html', data=data)
 
+
+def query_string():
+    print(request)
+    print(request.args)
+    return 'ok'
+
 # Verificar si el archivo se está ejecutando directamente
 if __name__=="__main__":
     # Ejecutar la aplicación Flask en modo de depuración y en el puerto 5000
+    app.add_url_rule('/query_string', view_func=query_string)
     app.run(debug=True, port=5000)
