@@ -1,6 +1,7 @@
 from flask import Flask 
 from flask import render_template
 from flask import request
+from flask import url_for, redirect
 
 # Crear una instancia de la aplicación Flask
 app=Flask(__name__)
@@ -39,8 +40,14 @@ def query_string():
     print(request.args.get('param2'))
     return 'ok'
 
+
+def pagina_no_encontrada(error):
+    #return render_template('404.html'), 404
+    return redirect(url_for('index'))
+
 # Verificar si el archivo se está ejecutando directamente
 if __name__=="__main__":
     # Ejecutar la aplicación Flask en modo de depuración y en el puerto 5000
     app.add_url_rule('/query_string', view_func=query_string)
+    app.register_error_handler(404,pagina_no_encontrada)
     app.run(debug=True, port=5000)
