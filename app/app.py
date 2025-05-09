@@ -8,6 +8,22 @@ from flask import render_template
 from flask import request
 from flask import url_for, redirect
 
+
+# Import routes
+#from app import routes
+
+# Crear la conexión a la base de datos
+#conn = psycopg2.connect(
+    #dbname="VendeFacil",
+    #user="root",
+    #password="1234",
+   # host="localhost",
+   # port="5432"
+#)
+
+# Crear un cursor para ejecutar consultas
+#cursor = conn.cursor()
+
 # Crear una instancia de la aplicación Flask
 app=Flask(__name__)
 
