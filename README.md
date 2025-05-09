@@ -11,13 +11,14 @@
    - [Instalación de Virtualenv](#instalación-de-virtualenv)
    - [Verificar si el entorno virtual está activo](#verificar-si-el-entorno-virtual-está-activo)
    - [Instalación de Flask y Herramientas Adicionales](#instalación-de-flask-y-herramientas-adicionales)
-5. [Inicializar el Proyecto](#inicializar-el-proyecto)
+5. [Dependencias Adicionales](#dependencias-adicionales)
+6. [Inicializar el Proyecto](#inicializar-el-proyecto)
    - [Verificar si el servidor está corriendo](#verificar-si-el-servidor-está-corriendo)
-6. [Solución a Errores Comunes](#solución-a-errores-comunes)
-7. [Metodología de Trabajo](#metodología-de-trabajo)
-8. [Versión del Proyecto](#versión-del-proyecto)
-9. [Autor e Institución](#autor-e-institución)
-10. [Licencia](#licencia)
+7. [Solución a Errores Comunes](#solución-a-errores-comunes)
+8. [Metodología de Trabajo](#metodología-de-trabajo)
+9. [Versión del Proyecto](#versión-del-proyecto)
+10. [Autor e Institución](#autor-e-institución)
+11. [Licencia](#licencia)
 
 ---
 
@@ -154,6 +155,20 @@ Para instalar Flask y otras herramientas necesarias, utiliza los siguientes coma
    ```
 
 Asegúrate de que estás dentro del entorno virtual antes de ejecutar estos comandos. Puedes verificarlo con el comando `echo $VIRTUAL_ENV` o `$env:VIRTUAL_ENV` según el terminal que estés utilizando.
+
+---
+
+## Dependencias Adicionales
+
+Para conectar la aplicación con PostgreSQL, asegúrate de instalar el paquete `psycopg2`:
+```bash
+pip install psycopg2
+```
+
+Si prefieres evitar problemas de compilación en algunos entornos, puedes usar la versión precompilada:
+```bash
+pip install psycopg2-binary
+```
 
 ---
 
