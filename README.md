@@ -14,11 +14,12 @@
 5. [Dependencias Adicionales](#dependencias-adicionales)
 6. [Inicializar el Proyecto](#inicializar-el-proyecto)
    - [Verificar si el servidor está corriendo](#verificar-si-el-servidor-está-corriendo)
-7. [Solución a Errores Comunes](#solución-a-errores-comunes)
-8. [Metodología de Trabajo](#metodología-de-trabajo)
-9. [Versión del Proyecto](#versión-del-proyecto)
-10. [Autor e Institución](#autor-e-institución)
-11. [Licencia](#licencia)
+7. [Conexión a la Base de Datos PostgreSQL](#conexión-a-la-base-de-datos-postgresql)
+8. [Solución a Errores Comunes](#solución-a-errores-comunes)
+9. [Metodología de Trabajo](#metodología-de-trabajo)
+10. [Versión del Proyecto](#versión-del-proyecto)
+11. [Autor e Institución](#autor-e-institución)
+12. [Licencia](#licencia)
 
 ---
 
@@ -91,6 +92,7 @@ La plataforma maneja distintos tipos de usuarios (clientes y vendedores), así c
    - En Windows (Git Bash desde Visual Studio Code):
      ```
      source env/Scripts/activate
+   
      ```
    - En Windows (Command Prompt o PowerShell):
      ```
@@ -189,6 +191,40 @@ Después de inicializar el proyecto, puedes abrir tu navegador y visitar el sigu
 [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 Si el servidor está corriendo, deberías ver la página de inicio o la respuesta configurada en tu aplicación Flask.
+
+---
+
+## Conexión a la Base de Datos PostgreSQL
+
+El proyecto utiliza PostgreSQL como base de datos. A continuación, se detalla la configuración utilizada:
+
+- **Host:** localhost
+- **Usuario:** postgres
+- **Contraseña:** 1234
+- **Base de datos:** VendeFacil
+- **Puerto:** 5432
+
+### Configuración en el Proyecto
+La conexión a la base de datos se realiza utilizando `SQLAlchemy` y `psycopg2`. Asegúrate de que los siguientes paquetes estén instalados en tu entorno virtual:
+
+```bash
+pip install flask_sqlalchemy psycopg2
+```
+
+En el archivo `app.py`, la configuración de la base de datos se define de la siguiente manera:
+
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1234@localhost:5432/VendeFacil'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+```
+
+### Verificar la Conexión
+Para verificar la conexión, puedes ejecutar el archivo `conexion_postgresql.py` en la carpeta `src`:
+
+```bash
+python src/conexion_postgresql.py
+```
+Este archivo realiza una conexión directa a la base de datos y ejecuta consultas para comprobar su funcionamiento.
 
 ---
 
